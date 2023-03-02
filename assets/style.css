@@ -486,3 +486,82 @@ h2 {
 .contact form .box:focus {
     box-shadow: var(--box-shadow-inset);
 }
+
+.credits {
+    margin-top: 1rem;
+    padding: 2.5rem 1rem;
+
+    font-size: 2rem;
+    text-align: center;
+
+    color: var(--black);
+    border-top: var(--border);
+}
+
+.credits span {
+    color: var(--primary);
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 1000;
+
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2rem;
+    text-align: center;
+    line-height: 5rem;
+
+    border-radius: 50%;
+    color: var(--black);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+
+    cursor: pointer;
+}
+
+#theme-toggler:hover {
+    color: var(--primary);
+    box-shadow: var(--box-shadow-inset);
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    .header {
+        left: -110%;
+    }
+
+    .header.active {
+        left: 0%;
+        transition: .4s linear;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+
+}
