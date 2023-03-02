@@ -37,15 +37,15 @@ body {
     background: var(--bg-color);
 }
 
-body.active {
+.active {
     --black: #fff;
     --light-color: #ddd;
-    --bg-color: #222;
-    --border: .1rem solid rgba(0, 0, 0, .4);
-    --box-shadow: .4rem .4rem 1rem #111,
-        -.4rem -.4rem 1rem #333;
-    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
-        -.4rem -.4rem 1rem #333 inset;
+    --bg-color: #13141b;
+    --border: .1rem solid rgba(208, 226, 242, 0.2);
+    --box-shadow: .4rem .4rem 1rem rgb(0, 0, 0),
+        -.4rem -.4rem .5rem #d0e2f21c;
+    --box-shadow-inset: .4rem .4rem 1rem rgb(0, 0, 0) inset,
+        -.4rem -.4rem .5rem #d0e2f21c inset;
 }
 
 section {
@@ -485,21 +485,6 @@ h2 {
 
 .contact form .box:focus {
     box-shadow: var(--box-shadow-inset);
-}
-
-.credits {
-    margin-top: 1rem;
-    padding: 2.5rem 1rem;
-
-    font-size: 2rem;
-    text-align: center;
-
-    color: var(--black);
-    border-top: var(--border);
-}
-
-.credits span {
-    color: var(--primary);
 }
 
 #theme-toggler {
