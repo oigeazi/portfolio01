@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #238E94;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --box-shadow: .4rem .4rem 1rem #ccc,
+        -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
+        -.4rem -.4rem 1rem #fff inset;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-left: 30rem;
+    background: var(--bg-color);
+}
+
+body.active {
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .1rem solid rgba(0, 0, 0, .4);
+    --box-shadow: .4rem .4rem 1rem #111,
+        -.4rem -.4rem 1rem #333;
+    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
+        -.4rem -.4rem 1rem #333 inset;
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3.5rem;
+
+    font-size: 1.7rem;
+
+    background: none;
+    color: var(--black);
+
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--primary);
+}
+
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    padding: 2rem;
+    width: 30rem;
+    height: 100%;
+
+    text-align: center;
+
+    border-right: var(--border);
+    background: var(--bg-color);
+}
+
+.header .profile img {
+    margin: 1rem 0;
+    width: 18rem;
+    height: 18rem;
+
+    border-radius: 50%;
+    border: 1rem solid transparent;
+    box-shadow: var(--box-shadow);
+}
+
+.header .profile h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .profile p {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.header .navbar {
+    padding-top: 1rem;
+}
+
+.header .navbar a {
+    display: block;
+
+    margin: 1.5rem 0;
+    padding: .7rem;
+
+    font-size: 2rem;
+
+    color: var(--black);
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.header .navbar a:hover {
+    color: var(--primary);
+    box-shadow: var(--box-shadow-inset);
+}
+
+#menu-btn {
+    display: none;
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1000;
+
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2rem;
+    line-height: 5rem;
+    text-align: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: var(--black);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+#menu-btn:hover {
+    color: var(--primary);
+    box-shadow: var(--box-shadow-inset);
+}
+
+.home {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 7rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    color: var(--black);
+}
+
+.home .content p {
+    padding-bottom: .5rem;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.home .share {
+    position: relative;
+    padding: 1rem;
+    top: 10rem;
+
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.home .share a {
+    margin: .5rem;
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2rem;
+    line-height: 5rem;
+
+    border-radius: .5rem;
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+}
+
+.home .share a:hover {
+    color: var(--pink);
+    box-shadow: var(--box-shadow-inset);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+}
+
+.about .row .box-container {
+    display: flex;
+    flex: 1 1 40rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .box-container .box {
+    flex: 1 1 18rem;
+    padding: 2rem;
+
+    text-align: center;
+
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.about .row .box-container .box h3 {
+    font-size: 5rem;
+    line-height: 1.1;
+    color: var(--black);
+}
+
+.about .row .box-container .box p {
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    color: var(--light-color);
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+
+.about .row .content h3 span {
+    color: var(--primary);
+}
+
+.about .row .content p {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: var(--light-color);
+}
+
+.about .row:nth-child(3) {
+    padding-top: 2rem;
+}
+
+.about .row .progress {
+    flex: 1 1 40rem;
+}
+
+.about .row .progress h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: normal;
+    font-size: 2rem;
+
+    color: var(--black);
+}
+
+.about .row .progress .bar {
+    margin: 1rem 0;
+    padding: .5rem;
+    height: 2rem;
+
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+}
+
+.about .row .progress .bar span {
+    display: block;
+    height: 100%;
+
+    background: var(--primary);
+    border-radius: 5rem;
+}
+
+.about .row .progress .bar-1-1 span {
+    width: 90%;
+}
+
+.about .row .progress .bar-1-2 span {
+    width: 75%;
+}
+
+.about .row .progress .bar-1-3 span {
+    width: 80%;
+}
+
+.about .row .progress .bar-2-1 span {
+    width: 95%;
+}
+
+.about .row .progress .bar-2-2 span {
+    width: 89%;
+}
+
+.about .row .progress .bar-2-3 span {
+    width: 65%;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.services .box-container .box {
+    position: relative;
+    padding: 2rem;
+
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+
+    overflow: hidden;
+    z-index: 0;
+}
+
+.services .box-container .box i {
+    padding-bottom: 5rem;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.services .box-container .box h3 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.services .box-container .box p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--light-color);
+}
+
+.services .box-container .box::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background: var(--primary);
+
+    clip-path: circle(9rem at 5% 0%);
+    z-index: -1;
+    transition: .3s linear;
+}
+
+.services .box-container .box:hover::before {
+    clip-path: circle(100%);
+}
+
+.services .box-container .box:hover>* {
+    color: #fff;
+}
+
+.projetos .box-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 2rem;
+}
+
+.projetos .box-container .box {
+    position: relative;
+    height: 25rem;
+
+    border: 1rem solid transparent;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+
+    overflow: hidden;
+}
+
+.projetos .box-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projetos .box-container .box .content {
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--bg-color);
+    transform: scale(0);
+}
+
+.projetos .box-container .box:hover .content {
+    transform: scale(1);
+}
+
+.projetos .box-container .box .content h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+
+    opacity: 0;
+    color: var(--black);
+    transition-delay: .3s;
+    transform: translateY(-5rem);
+}
+
+.projetos .box-container .box:hover .content h3 {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.contact form {
+    margin: 1rem auto;
+    padding: 2rem;
+
+    max-width: 70rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.contact form .box {
+    margin: .7rem 0;
+    padding: 1rem 1.5rem;
+    width: 100%;
+
+    font-size: 1.6rem;
+    text-transform: none;
+
+    color: var(--black);
+    background: none;
+
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .box:focus {
+    box-shadow: var(--box-shadow-inset);
+}
